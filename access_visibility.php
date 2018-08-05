@@ -2,16 +2,34 @@
 class MyProfile
 {
 
-    public $email;
+    private $email = "b@correo.com";
+    public $name;
+    public $last_name;
 
     public function __construct()
     {
 
     }
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setEmail($email)
+    {
+        //Reglas para la asignación de nuestro correo
+        $this ->email = $email;
+    }
+
+    private function getDetails()
+    {
+        //
+    }
 }
 
-$intsMyProfile = new MyProfile;
+$instMyProfile = new MyProfile;
 
-$intsMyProfile->email = 'bernardo@correo.com';
+//$intsMyProfile->email = 'bernardo@correo.com';
 
-echo $instMyProfile->email;
+echo $instMyProfile->getEmail();
